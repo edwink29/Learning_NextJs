@@ -15,6 +15,27 @@ const data = [
     image:
       "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/399385cb-1c90-4bd6-9c17-6e688763e149/NIKE+AIR+MAX+95+BIG+BUBBLE.png",
   },
+  {
+    id: 3,
+    title: "Shoe Nike Type C",
+    price: 100,
+    image:
+      "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/399385cb-1c90-4bd6-9c17-6e688763e149/NIKE+AIR+MAX+95+BIG+BUBBLE.png",
+  },
+  {
+    id: 4,
+    title: "Shoe Nike Type C",
+    price: 100,
+    image:
+      "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/399385cb-1c90-4bd6-9c17-6e688763e149/NIKE+AIR+MAX+95+BIG+BUBBLE.png",
+  },
+  {
+    id: 5,
+    title: "Shoe Nike Type C",
+    price: 100,
+    image:
+      "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/399385cb-1c90-4bd6-9c17-6e688763e149/NIKE+AIR+MAX+95+BIG+BUBBLE.png",
+  },
 ];
 
 export async function GET(request: NextRequest) {

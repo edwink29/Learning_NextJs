@@ -8,10 +8,18 @@ type ProductProps = {
 };
 
 async function getData() {
-  // const res = await fetch("https://fakestoreapi.com/products");
-  const res = await fetch("http://localhost:3000/api/product", {
+  const res = await fetch("https://fakestoreapi.com/productss", {
     cache: "no-store",
   });
+  // const res = await fetch("http://localhost:3000/api/product", {
+  //   cache: "force-cache",
+  //   next: {
+  //     // revalidate: 30,
+  //     tags: ["products"],
+  //   },
+  // });
+
+  // const res = await fetch("http://localhost:3000/api/product");
 
   if (!res.ok) {
     throw new Error("Failed to Fetch data");
@@ -31,9 +39,9 @@ export default async function ProductPage(props: ProductProps) {
     <div>
       <h1>Product Detail</h1>
       <div className="grid grid-cols-1 justify-items-center sm:grid-cols-3 md:grid-cols-4 gap-6 mx-auto max-w-7xl p-6">
-        {product.data.length > 0 &&
+        {product.length > 0 &&
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          product.data.map((product: any) => (
+          product.map((product: any) => (
             <div
               className="w-full max-w-sm bg-gray-100 hover:shadow-lg p-6 border border-gray-200 rounded-md shadow-md flex flex-col h-full"
               key={product.id}
