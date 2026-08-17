@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  await revalidateTag(tag);
+  revalidateTag(tag, "max");
 
   return NextResponse.json({ revalidate: true, now: Date.now() });
 }
