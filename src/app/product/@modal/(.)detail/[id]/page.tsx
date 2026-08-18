@@ -8,6 +8,7 @@ export default async function DetailProductPage(props: any) {
   const { id } = await params; //harus menggunakan await untuk params karena params itu promise
 
   const product = await getData("http://localhost:3000/api/product/?id=" + id);
+  console.log(product);
 
   return (
     <Modal>

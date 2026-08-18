@@ -14,20 +14,22 @@ export default async function ProductPage(props: ProductProps) {
   const params = await props.params;
   const products = await getData("http://localhost:3000/api/product");
 
+  console.log(products.products);
+
   return (
     <div>
       <h1>Product Detail</h1>
       <div className="grid grid-cols-1 justify-items-center sm:grid-cols-3 md:grid-cols-4 gap-6 mx-auto max-w-7xl p-6">
-        {products.data.length > 0 &&
+        {products.products.length > 0 &&
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          products.data.map((product: any) => (
+          products.products.map((product: any) => (
             <Link
               href={`/product/detail/${product.id}`}
               className="w-full max-w-sm bg-gray-100 hover:shadow-lg p-6 border border-gray-200 rounded-md shadow-md flex flex-col h-full"
               key={product.id}
             >
               <img
-                alt="product.title"
+                alt={product.title}
                 src={product.image}
                 className="rounded-base mb-6 w-48 h-48"
               />
